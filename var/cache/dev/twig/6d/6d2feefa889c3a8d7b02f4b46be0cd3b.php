@@ -70,9 +70,6 @@ let page = ";
               success: function(data){
                 if(data != \"\"){
                     \$('#example').append(data);
-
-
-    \$('#informations').attr(\"data-direction\", \"ASC\");
               }
               }
           })
@@ -89,14 +86,14 @@ let page = ";
       var direction = \$('#informations').attr('data-direction');
 
       ";
-        // line 44
+        // line 41
         echo "      ";
-        // line 45
+        // line 42
         echo "
           \$.ajax({
               type: 'GET',
               url: '";
-        // line 48
+        // line 45
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("filter"), "js", null, true);
         echo "',
               data: 'limit=' + encodeURIComponent(limit) + '&page=' + page + '&filter=' + filter + '&direction=' + direction,
@@ -104,7 +101,7 @@ let page = ";
                 if(data != \"\"){
                     \$('#example').append(data);
                     ";
-        // line 54
+        // line 51
         echo "              }
               }
           })
@@ -123,7 +120,7 @@ let page = ";
           \$.ajax({
               type: 'GET',
               url: '";
-        // line 71
+        // line 68
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("filter"), "js", null, true);
         echo "',
               data: 'limit=' + encodeURIComponent(limit) + '&page=' + page + '&filter=' + filter + '&direction=' + direction,
@@ -166,7 +163,7 @@ let page = ";
 
     public function getDebugInfo()
     {
-        return array (  127 => 71,  108 => 54,  100 => 48,  95 => 45,  93 => 44,  67 => 20,  54 => 9,  50 => 6,  43 => 1,);
+        return array (  124 => 68,  105 => 51,  97 => 45,  92 => 42,  90 => 41,  67 => 20,  54 => 9,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -195,9 +192,6 @@ let direction = {{data.direction??\"'DESC'\"}} #}
               success: function(data){
                 if(data != \"\"){
                     \$('#example').append(data);
-
-
-    \$('#informations').attr(\"data-direction\", \"ASC\");
               }
               }
           })
@@ -261,6 +255,6 @@ let direction = {{data.direction??\"'DESC'\"}} #}
 
   });
 
-</script>", "film/index.js.twig", "/opt/lampp/htdocs/glass/templates/film/index.js.twig");
+</script>", "film/index.js.twig", "/opt/lampp/htdocs/sakila_pagination/templates/film/index.js.twig");
     }
 }
