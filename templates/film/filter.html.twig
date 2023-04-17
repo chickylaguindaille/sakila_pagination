@@ -1,0 +1,62 @@
+{{ dump(data) }}
+
+<table class="table table-striped mx-auto" style="width:60%;">
+    <thead>
+        <tr>
+            <td><a href="#" class="text-dark filterlink f.title" id="title" data-filter="f.title" data-direction="DESC"><b>Titre</b></a>{% if data.filter != "f.title" %}<span class="text-secondary">{% else %}<span class="text-primary">{% endif %}{% if data.filter == "f.title" and data.direction == "DESC" %}<i class="bi bi-sort-alpha-up mx-2"></i>{% else %}<i class="bi bi-sort-alpha-down mx-2"></i>{% endif %}</span></td>
+            <td><a href="#" class="text-dark filterlink" id="price" data-filter="f.rentalRate" data-direction="DESC"><b>Prix de location</b></a>{% if data.filter != "f.rentalRate" %}<span class="text-secondary">{% else %}<span class="text-primary">{% endif %}{% if data.filter == "f.rentalRate" and data.direction == "DESC" %}<i class="bi bi-sort-numeric-up mx-2">{% else %}<i class="bi bi-sort-numeric-down mx-2"></i>{% endif %}</span></td>
+            <td><b>Classification</b></td>
+            <td><a href="#" class="text-dark filterlink" id="category" data-filter="c.name" data-direction="DESC"><b>Genre du film</b></a>{% if data.filter != "c.name" %}<span class="text-secondary">{% else %}<span class="text-primary">{% endif %}{% if data.filter == "c.name" and data.direction == "DESC" %}<i class="bi bi-sort-alpha-up mx-2"></i>{% else %}<i class="bi bi-sort-alpha-down mx-2"></i>{% endif %}</i></span></td>
+            <td><a href="#" class="text-dark filterlink" id="count" data-filter="titleCount" data-direction="DESC"><b>Nombre de fois loué</b>{% if data.filter != "titleCount" %}</a><span class="text-secondary">{% else %}<span class="text-primary">{% endif %}{% if data.filter == "titleCount" and data.direction == "DESC" %}<i class="bi bi-sort-numeric-up mx-2"></i>{% else %}<i class="bi bi-sort-numeric-down mx-2"></i>{% endif %}</span></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for film in films %}
+            <tr>
+                <td>{{ film.title }}</td>
+                <td>{{ film.rentalRate }}</td>
+                <td>{{ film.rating }}</td>
+                <td>{{ film.name }}</td>
+                <td>{{ film.titleCount??"" }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% set length = data.lengthtab / data.limit %}
+{% set page = data.active %}
+{% set firstpage = page - 4 %}
+{% set lastpage = page + 4 %}
+{% set underlengthmiddle = length - 5 %}
+{% set underlength = length - 8 %}
+
+
+    <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item" value="{{1}}">
+            <a class="page-link" href="#" tabindex="-1">Début</a>
+        </li>
+
+    {% if page > 4 and page < underlengthmiddle %}
+        {% for i in firstpage.. lastpage %}
+            <li class="page-item {% if data.active == i %}active{% endif %}" value="{{i}}"><a class="page-link" value="{{i}}" href="#">{{i}}</a></li>
+        {% endfor %}
+    {% elseif page < 11 %}
+        {% for i in 1.. 10 %}
+            <li class="page-item {% if data.active == i %}active{% endif %}" value="{{i}}"><a class="page-link" value="{{i}}" href="#">{{i}}</a></li>
+        {% endfor %}
+    {% else %}
+        {% for i in underlength.. length %}
+            <li class="page-item {% if data.active == i %}active{% endif %}" value="{{i}}"><a class="page-link" value="{{i}}" href="#">{{i}}</a></li>
+        {% endfor %}
+    {% endif %}
+
+    {% if page < underlengthmiddle and length > 10 %}
+        <li class="page-item" ><a class="page-link" href="#">...</a></li>
+        <li class="page-item {% if data.active == length %}active{% endif %}" value="{{length}}"><a class="page-link" value="{{length}}" href="#">{{length}}</a></li>
+    {% endif %}
+        <li class="page-item" value="{{length}}">
+            <a class="page-link" href="#">Fin</a>
+        </li>
+    </ul>
+    </nav>

@@ -1,0 +1,88 @@
+<script>
+
+  $(document).ready(function(){
+
+
+let page = {{data.active??""}}
+{# let filter = {{filter??"'f.title'"}}
+let direction = {{data.direction??"'DESC'"}} #}
+
+    $('#selectnumber').change(function(){
+
+      $('#example').html('');
+      var limit = $(this).val();
+      var page = 1;
+      var filter = $('#informations').attr('data-filter');
+      var direction = $('#informations').attr('data-direction');
+
+          $.ajax({
+              type: 'GET',
+              url: '{{ path('filter')}}',
+              data: 'limit=' + encodeURIComponent(limit) + '&page=' + page + '&filter=' + filter + '&direction=' + direction,
+              success: function(data){
+                if(data != ""){
+                    $('#example').append(data);
+              }
+              }
+          })
+    });
+
+
+
+    $('#example').on('click', '.page-item', function(){
+
+      limit = $('#selectnumber').val();
+      $('#example').html('');
+      var page = $(this).val();
+      var filter = $('#informations').attr('data-filter');
+      var direction = $('#informations').attr('data-direction');
+
+      {# console.log(filter); #}
+      {# console.log(page); #}
+
+          $.ajax({
+              type: 'GET',
+              url: '{{ path('filter')}}',
+              data: 'limit=' + encodeURIComponent(limit) + '&page=' + page + '&filter=' + filter + '&direction=' + direction,
+              success: function(data){
+                if(data != ""){
+                    $('#example').append(data);
+                    {# console.log(data); #}
+              }
+              }
+          })
+    });
+
+    $('#example').on('click', '.filterlink', function(){
+
+      limit = $('#selectnumber').val();
+      $('#example').html('');
+      var filter = $(this).attr('data-filter');
+      var direction = $(this).attr('data-direction');
+      var id = $(this).attr('id');
+
+      console.log(filter);
+
+          $.ajax({
+              type: 'GET',
+              url: '{{ path('filter')}}',
+              data: 'limit=' + encodeURIComponent(limit) + '&page=' + page + '&filter=' + filter + '&direction=' + direction,
+              success: function(data){
+                if(data != ""){
+                    $('#example').append(data);
+                    if(direction == 'ASC')
+                        $('#'+id).attr("data-direction", "DESC");
+                    else if (direction == 'DESC')
+                        $('#'+id).attr("data-direction", "ASC");
+
+                    $('#informations').attr('data-filter', filter);
+                    $('#informations').attr("data-direction", direction);
+              }
+              }
+          })
+    });
+
+
+  });
+
+</script>

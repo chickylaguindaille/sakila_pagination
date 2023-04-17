@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="text-center">
+    <h1 class="my-3"><u>Sakila Pagination</u></h1>
+</div>
+<div class="w-25 mx-auto my-4 d-flex justify-content-center">
+    <div class="d-flex align-items-center mx-2 text-white">
+        Éléments par page : 
+    </div>
+    <div>
+        <select id="selectnumber" class="form-select" aria-label="Default select example">
+        <option selected value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        </select>
+    </div>
+    <div id="informations" class="" data-filter="{{data.filter??"f.title"}}" data-direction="{{data.direction??"DESC"}}">infos</div>
+</div>
+
+
+<div id="example">
+        <table id="" class="table table-striped mx-auto" style="width:60%;">
+            <thead>
+                <tr>
+                    <td><a href="#" class="text-dark filterlink" id="title" data-filter="f.title" data-direction="ASC"><b>Titre</b></a><span class="text-primary"><i class="bi bi-sort-alpha-down mx-2"></i></span></td>
+                    <td><a href="#" class="text-dark filterlink" data-filter="f.rentalRate" data-direction="DESC"><b>Prix de location</b></a><span class="text-secondary"><i class="bi bi-sort-numeric-down mx-2"></span></td>
+                    <td><b>Classification</b></td>
+                    <td><a href="#" class="text-dark filterlink" data-filter="c.name" data-direction="DESC"><b>Genre du film</b></a><span class="text-secondary"><i class="bi bi-sort-alpha-down mx-2"></span></td>
+                    <td><a href="#" class="text-dark filterlink" data-filter="titleCount" data-direction="DESC"><b>Nombre de fois loué</b></a><span class="text-secondary"><i class="bi bi-sort-numeric-down mx-2"></i></span></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for film in films %}
+                    <tr>
+                        <td>{{ film.title }}</td>
+                        <td>{{ film.rentalRate }}</td>
+                        <td>{{ film.rating }}</td>
+                        <td>{{ film.name }}</td>
+                        <td>{{ film.titleCount??"" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    {% set variable2 = 10 %}
+    {% set length = data.lengthtab / variable2 %}
+
+
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item" value="{{1}}">
+            <a class="page-link" href="#" tabindex="-1">Début</a>
+            </li>
+
+            {% for i in 1..9 %}
+                <li class="page-item {% if data.active == i %}active{% endif %}" value="{{i}}"><a class="page-link" href="#">{{i}}</a></li>
+            {% endfor %}
+
+            {% if length > 10 %}
+                <li class="page-item" ><a class="page-link" href="#">...</a></li>
+                <li class="page-item {% if data.active == length %}active{% endif %}" value="{{length}}"><a class="page-link" value="{{length}}" href="#">{{length}}</a></li>
+            {% endif %}
+
+
+            <li class="page-item" value="{{length}}">
+                <a class="page-link" href="#">Fin</a>
+        </li>
+        </ul>
+    </nav>
+</div>
+{% endblock %}
