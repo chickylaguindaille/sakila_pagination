@@ -471,6 +471,6 @@ class __TwigTemplate_495f622beeb56eee33cabcfb7db28148 extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "/opt/lampp/htdocs/glass/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/vendor/symfony/web-profiler-bundle/Resources/views/Collector/twig.html.twig");
     }
 }

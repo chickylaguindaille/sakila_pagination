@@ -1452,3 +1452,7 @@ fc7983,::1,GET,http://localhost/glass/public/index.php/films,1681773357,,200
 01908b,::1,GET,http://localhost/glass/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=5,1681773359,,200
 b9268a,::1,GET,http://localhost/glass/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=1,1681773361,,200
 7f7dbd,::1,GET,http://localhost/sakila_pagination/public/index.php/films,1681773655,,200
+476fbb,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/,1681776861,,404
+8c38a2,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films,1681776876,,200
+2aead2,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=2,1681776890,,200
+72a5ea,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=3,1681776895,,200

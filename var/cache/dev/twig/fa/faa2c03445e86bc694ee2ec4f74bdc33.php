@@ -314,6 +314,6 @@ class __TwigTemplate_6fce574600fbcbd6048ee4c8b30f6653 extends Template
     </nav>
 </div>
 {% endblock %}
-", "film/index.html.twig", "/opt/lampp/htdocs/glass/templates/film/index.html.twig");
+", "film/index.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/templates/film/index.html.twig");
     }
 }

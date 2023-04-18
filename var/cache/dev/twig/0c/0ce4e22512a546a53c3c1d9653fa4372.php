@@ -643,6 +643,6 @@ class __TwigTemplate_4469dbb1e5bca15d807eab3610d93de0 extends Template
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/notifier.html.twig", "/opt/lampp/htdocs/glass/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
+", "@WebProfiler/Collector/notifier.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/vendor/symfony/web-profiler-bundle/Resources/views/Collector/notifier.html.twig");
     }
 }

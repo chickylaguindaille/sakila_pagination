@@ -222,6 +222,6 @@ class __TwigTemplate_d402b493fbf0345f1cc863af05897ca9 extends Template
 
     {% include 'film/index.js.twig' %}
 </html>
-", "base.html.twig", "/opt/lampp/htdocs/glass/templates/base.html.twig");
+", "base.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/templates/base.html.twig");
     }
 }

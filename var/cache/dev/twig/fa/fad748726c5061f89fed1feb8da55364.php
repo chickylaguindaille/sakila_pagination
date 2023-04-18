@@ -2084,6 +2084,6 @@ class __TwigTemplate_e41a6fbfb001f7ccfc513707d80034dd extends Template
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/opt/lampp/htdocs/glass/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

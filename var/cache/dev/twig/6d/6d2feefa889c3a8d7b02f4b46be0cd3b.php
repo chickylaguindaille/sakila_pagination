@@ -255,6 +255,6 @@ let direction = {{data.direction??\"'DESC'\"}} #}
 
   });
 
-</script>", "film/index.js.twig", "/opt/lampp/htdocs/sakila_pagination/templates/film/index.js.twig");
+</script>", "film/index.js.twig", "/Applications/MAMP/htdocs/sakila_pagination/templates/film/index.js.twig");
     }
 }

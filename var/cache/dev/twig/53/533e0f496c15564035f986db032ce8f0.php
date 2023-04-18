@@ -70,9 +70,12 @@ tbody td {
 }
 
 body {
-  ";
-        // line 33
-        echo "}
+  background-image: url(\"";
+        // line 31
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("background.jpg"), "css", null, true);
+        echo "\");
+  background-size: cover;
+}
 
 table{
   background-color: white;
@@ -101,9 +104,14 @@ td{
         return "film/index.css.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  75 => 33,  43 => 1,);
+        return array (  75 => 31,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -138,8 +146,8 @@ tbody td {
 }
 
 body {
-  {# background-image: url(\"{{ asset('background.jpg') }}\");
-  background-size: cover; #}
+  background-image: url(\"{{ asset('background.jpg') }}\");
+  background-size: cover;
 }
 
 table{
@@ -155,6 +163,6 @@ td{
   border: 0px;
 }
 
-</style>", "film/index.css.twig", "/opt/lampp/htdocs/glass/templates/film/index.css.twig");
+</style>", "film/index.css.twig", "/Applications/MAMP/htdocs/sakila_pagination/templates/film/index.css.twig");
     }
 }

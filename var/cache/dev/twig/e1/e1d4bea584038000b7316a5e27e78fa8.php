@@ -357,6 +357,6 @@ class __TwigTemplate_4dd927da96da91db88ab2b82bb3175fe extends Template
             <a class=\"page-link\" href=\"#\">Fin</a>
         </li>
     </ul>
-    </nav>", "film/filter.html.twig", "/opt/lampp/htdocs/glass/templates/film/filter.html.twig");
+    </nav>", "film/filter.html.twig", "/Applications/MAMP/htdocs/sakila_pagination/templates/film/filter.html.twig");
     }
 }
