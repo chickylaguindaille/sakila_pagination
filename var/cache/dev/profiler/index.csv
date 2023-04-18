@@ -1456,3 +1456,13 @@ b9268a,::1,GET,http://localhost/glass/public/index.php/films/filter?direction=DE
 8c38a2,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films,1681776876,,200
 2aead2,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=2,1681776890,,200
 72a5ea,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=f.title&limit=10&page=3,1681776895,,200
+80e5e7,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films,1681777006,,200
+69a5f9,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=c.name&limit=10&page=1,1681777012,,200
+62775d,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=c.name&limit=10&page=1,1681777015,,200
+5fbe5f,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=ASC&filter=c.name&limit=10&page=1,1681777017,,200
+e774cf,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=f.rentalRate&limit=10&page=1,1681777020,,200
+1af364,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=ASC&filter=f.rentalRate&limit=10&page=1,1681777022,,200
+8a8986,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=DESC&filter=titleCount&limit=10&page=1,1681777026,,200
+ed3414,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=ASC&filter=titleCount&limit=10&page=1,1681777027,,200
+346211,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=ASC&filter=titleCount&limit=10&page=6,1681777031,,200
+243208,127.0.0.1,GET,http://localhost:8888/sakila_pagination/public/index.php/films/filter?direction=ASC&filter=titleCount&limit=50&page=1,1681777037,,200

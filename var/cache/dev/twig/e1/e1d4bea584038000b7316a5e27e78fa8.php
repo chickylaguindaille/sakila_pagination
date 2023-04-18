@@ -39,10 +39,8 @@ class __TwigTemplate_4dd927da96da91db88ab2b82bb3175fe extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "film/filter.html.twig"));
 
-        // line 1
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 1, $this->source); })()));
+        // line 2
         echo "
-
 <table class=\"table table-striped mx-auto\" style=\"width:60%;\">
     <thead>
         <tr>
@@ -291,12 +289,12 @@ class __TwigTemplate_4dd927da96da91db88ab2b82bb3175fe extends Template
 
     public function getDebugInfo()
     {
-        return array (  267 => 58,  254 => 56,  251 => 55,  249 => 54,  246 => 53,  243 => 52,  226 => 50,  221 => 49,  218 => 48,  201 => 46,  196 => 45,  193 => 44,  176 => 42,  171 => 41,  169 => 40,  162 => 36,  156 => 32,  154 => 31,  152 => 30,  150 => 29,  148 => 28,  146 => 27,  144 => 26,  139 => 23,  130 => 20,  126 => 19,  122 => 18,  118 => 17,  114 => 16,  111 => 15,  107 => 14,  91 => 10,  78 => 9,  64 => 7,  51 => 6,  43 => 1,);
+        return array (  265 => 58,  252 => 56,  249 => 55,  247 => 54,  244 => 53,  241 => 52,  224 => 50,  219 => 49,  216 => 48,  199 => 46,  194 => 45,  191 => 44,  174 => 42,  169 => 41,  167 => 40,  160 => 36,  154 => 32,  152 => 31,  150 => 30,  148 => 29,  146 => 28,  144 => 27,  142 => 26,  137 => 23,  128 => 20,  124 => 19,  120 => 18,  116 => 17,  112 => 16,  109 => 15,  105 => 14,  89 => 10,  76 => 9,  62 => 7,  49 => 6,  43 => 2,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{{ dump(data) }}
+        return new Source("{# {{ dump(data) }} #}
 
 <table class=\"table table-striped mx-auto\" style=\"width:60%;\">
     <thead>
